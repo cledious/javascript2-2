@@ -68,8 +68,64 @@ function recogerDatos42() {
 /*5. Haga un programa que reciba el nombre de un producto, el precio de este y
 cantidad a comprar, si la persona compra 3 se le aplicará un descuento de
 10%, si lleva 5 o más un descuento de 20%. Debe imprimir una tabla con el
-
 nombre del producto, cantidad, subtotal, descuento a aplicar y el precio final a
-pagar.*/
- 
+pagar.*//*
+let nameProduct ,priceProduct ,listProduct;
+nameProduct = prompt(Number("name"));
+priceProduct = prompt(Number("price"));
+for (let i = 0; i < array.length; i++) {
+    listProduct += nameProduct;
+    
+}
+*/
+/*6. Haga un programa que reciba las notas de tres exámenes realizados por un
+estudiante en un curso,x
+el primer examen tiene un valor de 25% de la nota
+del curso, el segundo examen un valor de 35% y el examen final 40%. Para
+aprobar el estudiante debe tener 70 como nota del curso y no debe tener
+menos de 50 en cada examen.
+Si el estudiante obtuvo menos de 70 y mayor
+a 59 en el curso debe de ir a ampliación. Si el estudiante obtuvo más de 70
+en el curso, pero uno de los exámenes tuvo nota menor a 50 debe ir a
+ampliación. Si el estudiante obtuvo nota menor a 60 reprueba el curso. */
+
+let n1,n1Pro,n2,n2Pro,n3,n3Pro,p;
+//25%
+n1 = parseInt(prompt("primer nota"));
+//35%
+n2 = parseInt(prompt("segunda nota"));
+//40%
+n3 = parseInt(prompt("tercer nota"));
+//n1 promedio
+n1Pro = n1 * 25 / 100;
+//n2 promedio
+n2Pro = n2 * 35 / 100;
+//n3 promedio
+n3Pro = n3 * 40 / 100;
+//promedio
+p = n1Pro + n2Pro + n3Pro;
+if (n1 >= 50 && n2 >= 50 && n3 >= 50) {
+    if (p < 60 ) {
+        alert("reprobaste")
+    }
+    if (p >= 60 && p < 70 ) {
+        alert("tienes derecho de ir a ampliación");
+    }
+    if ( p >= 70 ) {
+        alert("aprobó");
+    }
+}
+else if (p > 70 && n1 < 50){
+    alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
+}
+else if (p > 70 && n2 < 50){
+    alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
+}
+else if (p > 70 && n3 < 50){
+    alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
+}
+else {
+    alert("aplazado en los examenes")
+}
+
 
