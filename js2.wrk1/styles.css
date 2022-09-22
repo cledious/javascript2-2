@@ -1,0 +1,40 @@
+* {
+    text-transform: capitalize;
+    background-color: tomato;
+    color: beige;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+label ,button{
+    background-color: rgb(247, 129, 108);
+    color: white;
+    padding: 1em;
+    text-transform: uppercase;
+    border-style: none;
+}
+
+button:hover {
+    background-color: white;
+    color: tomato;
+}
+
+input {
+    border-style: none;
+    border-bottom: solid 0.2em;
+}
+
+h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 3em;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
