@@ -88,44 +88,41 @@ Si el estudiante obtuvo menos de 70 y mayor
 a 59 en el curso debe de ir a ampliación. Si el estudiante obtuvo más de 70
 en el curso, pero uno de los exámenes tuvo nota menor a 50 debe ir a
 ampliación. Si el estudiante obtuvo nota menor a 60 reprueba el curso. */
+function recogerDatos6() {
+    let n1,n1Pro,n2,n2Pro,n3,n3Pro,p;
+    //25%
+    n1 = document.getElementById("firstNote").value;
+    //35%
+    n2 = document.getElementById("secondNote").value;
+    //40%
+    n3 = document.getElementById("thirdNote").value;
+    //n1 promedio
+    n1Pro = n1 * 25 / 100;
+    //n2 promedio
+    n2Pro = n2 * 35 / 100;
+    //n3 promedio
+    n3Pro = n3 * 40 / 100;
+    //promedio
+    p = n1Pro + n2Pro + n3Pro;
+    if (n1 >= 50 && n2 >= 50 && n3 >= 50) {
+        if (p < 60 ) {
+            alert("reprobaste")
+        }
+        if (p >= 60 && p < 70 ) {
+            alert("tienes derecho de ir a ampliación");
+        }
+        if ( p >= 70 ) {
+            alert("aprobó");
+        }
+    }
+    else if (p > 70 && n1 < 50 || p > 70 && n2 < 50 || p > 70 && n3 < 50 ){
+        alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
+    }
+    else {
+        alert("aplazado en los examenes")
+    }
+    document.writeln("nota-porcentage:"+ "<br>" + n1 + "-" + n1Pro + "<br>" + n2+"-" + n2Pro + "<br>" + n3 + "-" + n3Pro + n1 + "<br>" + "tu promedio es de :" + p);
+    }
 
-let n1,n1Pro,n2,n2Pro,n3,n3Pro,p;
-//25%
-n1 = parseInt(prompt("primer nota"));
-//35%
-n2 = parseInt(prompt("segunda nota"));
-//40%
-n3 = parseInt(prompt("tercer nota"));
-//n1 promedio
-n1Pro = n1 * 25 / 100;
-//n2 promedio
-n2Pro = n2 * 35 / 100;
-//n3 promedio
-n3Pro = n3 * 40 / 100;
-//promedio
-p = n1Pro + n2Pro + n3Pro;
-if (n1 >= 50 && n2 >= 50 && n3 >= 50) {
-    if (p < 60 ) {
-        alert("reprobaste")
-    }
-    if (p >= 60 && p < 70 ) {
-        alert("tienes derecho de ir a ampliación");
-    }
-    if ( p >= 70 ) {
-        alert("aprobó");
-    }
-}
-else if (p > 70 && n1 < 50){
-    alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
-}
-else if (p > 70 && n2 < 50){
-    alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
-}
-else if (p > 70 && n3 < 50){
-    alert("irás a ampliacion por no haber pasado un examen ,aunque hayas pasado el curso");
-}
-else {
-    alert("aplazado en los examenes")
-}
 
 
